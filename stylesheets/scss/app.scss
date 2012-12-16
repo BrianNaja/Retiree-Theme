@@ -215,6 +215,13 @@ hgroup h1 a:hover {
 	color: #666666;
 }
 
+.subheader {
+	font-size: 28px; font-size: 2.8rem;
+	color: #FFFFFF;/*white*/
+	padding: 4px 0px 0px 20px;
+	float: left;
+}
+
 .slideshow { 
 	background: url(images/backgrounds/background.gif) repeat;  
 }
@@ -1287,10 +1294,6 @@ table tbody tr:nth-child(even) {
 
 /*404 Page----------------------------------------------*/
 
-/*!@media 1130px - 481px------------------------------------*/
-@media only screen and (max-width: 1130px) and (min-width: 481px) {
-	hgroup h1 a{ margin-left: 10px}
-}
 
 /*!@media 962px - 481px------------------------------------*/
 @media only screen and (max-width: 962px) and (min-width: 481px) {
@@ -1299,8 +1302,12 @@ table tbody tr:nth-child(even) {
 		font-size: 15px;
 		font-size: 1.5rem;}
 	
-	hgroup { width: 50%;
-			 	   text-align: center; }
+	hgroup h1 {
+		font-size: 40px;
+		margin-left: 20px;}
+		
+	.subheader { font-size: 22px;
+				margin-left: 20px;}		
 			 
 	.sub-menu { display: block; position: relative;}
 			 
@@ -1308,10 +1315,13 @@ table tbody tr:nth-child(even) {
 	
 	.mobile_menu {float: right; width: 35%; }
 	
+	.mobile_menu_btn {height: 38px;
+					  margin: 8px -8px 0px 0px;}
+	
 	#header, nav {margin: 0px;}
 		
     header .mobile_select { display: block;
-    			 			               margin: 0px 20px 0px 0px; }
+    			 			margin: 0px 20px 0px 0px; }
     			 			
     nav { margin: 0px;
 		     padding: 8px 0px 0px 0px; }
@@ -1388,8 +1398,13 @@ table tbody tr:nth-child(even) {
 	font-style: italic;
 	font-weight: normal;
 	}
+	
+	.mobile_menu_btn {height: 38px;
+					  margin: 16px -8px 0px 0px;}
+					  
 }
 /*@media 962px - 481px------------------------------------*/
+
 
 /*!@media 480px------------------------------------*/
 @media handheld, only screen and (max-width: 480px) {
@@ -1402,28 +1417,30 @@ table tbody tr:nth-child(even) {
 	
  	.container {padding: 0 8px 0 8px; }
  	
- 	hgroup { width: 50% !important;
-			       text-align: center; }
+ 	hgroup { width: 50% !important; }
 			       
 	nav .nav-bar, nav .mobile_menu { display: none; }
 	
     header .mobile_select { display: block;
     			 			               margin: 0 15px 0 5px; }
 	
-	hgroup h1 { font-size: 27px; 
-					   font-size: 2.7rem;
-					   margin: 12px 0px 0px 8px; }
+	hgroup h1 { font-size: 30px; 
+				font-size: 3.0rem;
+				margin: 10px 0px 0px 8px; }
+				
+	.subheader { font-size: 22px;
+				margin-left: 6px;}			
 				
 	.sub-menu { display: block;
-					     position: relative;}
+				position: relative;}
 				
 	nav { margin: 0px;
-		     padding: 8px 0px 0px 0px; }
+		  padding: 8px 0px 0px 0px; }
 				
 	.mobile_select p { font-size: 1.1em; }
 	
 	.mobile_menu_btn {height: 38px;
-								    margin: 4px -8px 0px 0px;}
+					  margin: 12px -8px 0px 0px;}
 								    
 	.single img { /*post thumbnail single page*/
 			width: 100%;}							    							    

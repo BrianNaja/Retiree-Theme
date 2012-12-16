@@ -31,9 +31,9 @@
 	<div id="header">
 	    <header class="row">
 	    
-	    	<hgroup class=" four phone-one columns">
+	    	<hgroup class=" four phone-two columns">
 				<h1><a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a></h1>
-				<!--<h4 class="subheader"><?php bloginfo('description'); ?></h4>-->
+				<h2 class="subheader"><?php bloginfo('description'); ?></h2>
 			</hgroup>
 			
 	    	<nav class="seven phone-one columns">
