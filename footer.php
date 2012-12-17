@@ -21,13 +21,8 @@
 
 	<!-- Included JS Files -->
 	
- 	<!--<script src="<?php bloginfo('template_url'); ?>/javascripts/foundation.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/javascripts/klass-3.0.5.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/javascripts/photoswipe-3.0.5.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/javascripts/jquery-1.7.2.js"></script> 
-	<script src="<?php bloginfo('template_url'); ?>/javascripts/fitvids.js"></script> 
-	<script src="<?php bloginfo('template_url'); ?>/javascripts/photoswipe-3.0.5.js"></script>-->
-	<script src="<?php bloginfo('template_url'); ?>/javascripts/app-ck.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/fitvids.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/javascripts/app.js"></script>
 	
 
 </body>

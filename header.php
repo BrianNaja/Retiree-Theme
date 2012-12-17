@@ -18,7 +18,7 @@
 	
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
-		<script src="/wp-content/themes/Foundation-Zurb/javascripts/modernizr_html5shiv_with_print.js"></script>
+		<script src="/wp-content/themes/Boilermaker-Retiree/javascripts/modernizr_html5shiv_with_print.js"></script>
 	<![endif]-->
 	
 	<?php wp_head(); ?>

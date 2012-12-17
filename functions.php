@@ -122,39 +122,6 @@ function commenter_link() {
 } // end commenter_link
 
 
-// Custom Pagination
-/**
- * Retrieve or display pagination code.
- *
- * The defaults for overwriting are:
- * 'page' - Default is null (int). The current page. This function will
- *      automatically determine the value.
- * 'pages' - Default is null (int). The total number of pages. This function will
- *      automatically determine the value.
- * 'range' - Default is 3 (int). The number of page links to show before and after
- *      the current page.
- * 'gap' - Default is 3 (int). The minimum number of pages before a gap is 
- *      replaced with ellipses (...).
- * 'anchor' - Default is 1 (int). The number of links to always show at begining
- *      and end of pagination
- * 'before' - Default is '<div class="emm-paginate">' (string). The html or text 
- *      to add before the pagination links.
- * 'after' - Default is '</div>' (string). The html or text to add after the
- *      pagination links.
- * 'next_page' - Default is '__('&raquo;')' (string). The text to use for the 
- *      next page link.
- * 'previous_page' - Default is '__('&laquo')' (string). The text to use for the 
- *      previous page link.
- * 'echo' - Default is 1 (int). To return the code instead of echo'ing, set this
- *      to 0 (zero).
- *
- * @author Eric Martin <eric@ericmmartin.com>
- * @copyright Copyright (c) 2009, Eric Martin
- * @version 1.0
- *
- * @param array|string $args Optional. Override default arguments.
- * @return string HTML content, if not displaying.
- */
 function emm_paginate($args = null) {
 	$defaults = array(
 		'page' => null, 'pages' => null, 
@@ -234,19 +201,6 @@ function emm_paginate($args = null) {
 	return $output;
 }
 
-/**
- * Helper function for pagination which builds the page links.
- *
- * @access private
- *
- * @author Eric Martin <eric@ericmmartin.com>
- * @copyright Copyright (c) 2009, Eric Martin
- * @version 1.0
- *
- * @param int $start The first link page.
- * @param int $max The last link page.
- * @return int $page Optional, default is 0. The current page.
- */
 function emm_paginate_loop($start, $max, $page = 0) {
 	$output = "";
 	for ($i = $start; $i <= $max; $i++) {
@@ -270,16 +224,6 @@ function new_excerpt_more($more) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 
-/*
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-function new_excerpt_more($more) {
-       global $post;
-	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Read More</a>';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
-*/
-
 // login logo
 
 function custom_loginlogo() {
@@ -289,21 +233,31 @@ h1 a {background-image: url('.get_bloginfo('template_directory').'/stylesheets/c
 }
 add_action('login_head', 'custom_loginlogo');
 
-// post thumbnail support
-
-if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'post-thumb', 500, 500 ); //300 pixels wide (and unlimited height)
-	add_image_size( 'homepage-thumb', 600, 200, true ); //(cropped)
-	add_image_size( 'video-thumb', 295, 166, true ); //(cropped)
-}
-
-// Shortcodes
-
-include('shortcodes-conditional-tags.php');
-
 // Custom Post Types
 
-include('custom-post-type.php');
+add_action('init', 'sidebar');
 
+function sidebar() {
+	///Register type and custom taxonomy for type.
+	$sidebar_args = array('label' => 'Sidebar',
+				  'public' => true,
+				  'show_ui' => true,
+				  'capability_type' => 'post',
+				  'hierarchical' => true,
+				  'has_archive' => true,
+				  'taxonomies' => array('post_tag'),
+				  'supports' => array('title', 'editor', 'excerpt', 'comments', 'thumbnail'));
+ //Register type and custom taxonomy for type.
+     
+register_post_type( 'sidebar' , $sidebar_args );}  //Register type and custom taxonomy for type.
+
+// Register jQuery and FitVids
+
+function my_scripts_method() {
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'jquery','https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js');  
+}    
+ 
+add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 ?>
