@@ -211,15 +211,6 @@ hgroup h1 a:hover {
 	width: 100%;
 }
 
-.slideshow aside {
-	margin: auto;
-}
-
-.slideshow article {
-	border-bottom: none;
-}
-
-
 .featured img, .featured div{/*for orbit to keep images from displaying block*/
 	display: none;
 }
@@ -288,8 +279,44 @@ article .bullet {
 	color: #898787;
 }
 
-.moretext {
-	padding: 4px 8px 4px 8px;
+.what-is-moretext a {
+	color: black;
+}
+
+.what-is-moretext {
+	padding: 6px 8px 6px 8px;
+	background: #00a6fc url(images/backgrounds/input-bg.png);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
+	font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
+	font-weight: bold;
+	border: 1px solid #707070;
+	background-color: rgb(191, 191, 191);/*lightergray*/
+	font-size: 14px; 
+	font-size: 1.4rem;
+	-webkit-border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    border-radius: 2px;
+	-webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
+}
+
+.what-is-moretext:hover {
+	background-color: rgb(112, 112, 112);/*darkgray*/
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.what-is-moretext a:hover {
+	color: black !important;
+}
+
+.moretext  {
+	padding: 6px 8px 6px 8px;
+	margin-bottom: 10px;
 	color: #FFF;
 	background: #00a6fc url(images/backgrounds/input-bg.png);
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
@@ -299,12 +326,12 @@ article .bullet {
 	background-color: rgb(0, 79, 112);/*lighterblue*/
 	font-size: 14px; 
 	font-size: 1.4rem;
-	-webkit-border-radius: 4px; 
-    -moz-border-radius: 4px; 
-    border-radius: 4px;
-	-webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
+	-webkit-border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    border-radius: 2px;
+	-webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
 }
 
 .moretext:hover {
@@ -349,11 +376,12 @@ article .bullet {
 }
 
 aside  {
-	margin: 15px 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 aside li  {
 	border-bottom: 1px dotted #555;
+	padding-bottom: 15px;
 }
 
 a {
@@ -382,6 +410,10 @@ article h2 a:hover {
 	color: #004766;
 }
 
+aside h2 {
+	font-size: 26px;
+}
+
 aside ul li:nth-child(1) {
 	border-bottom: none;
 }
@@ -395,17 +427,9 @@ aside li h4 {
 }
 
 aside article { 
-	padding: 0px 0px 5px 0px;
+	padding: 0px 0px 25px 0px;
 	margin: 0;
 	border-bottom: 1px dotted #555;
-}
-
-aside a {
-	display: block;
-	font-size: 18px;
-	font-size: 1.8rem;
-	font-weight: bold;
-	margin: 0px 0px 10px 0px;
 }
 
 span a, p a, aside a {
@@ -416,20 +440,6 @@ span a, p a, aside a {
 .comment-count a:after {
 	content: "  >";
 	font-family: ModernPictogramsNormal;
-}
-
-.index-page  { /*post thumbnail index page*/
-}
-
-.testimg{
-	width: 98%;
-	margin: 0px 0px 15px 0px; 
-	background-color: rgb(85, 85, 85);
-}
-
-.testimg img {
-	display: block;
-	margin: 0px auto;
 }
 
 .single img { /*post thumbnail single page*/
@@ -453,8 +463,7 @@ span a, p a, aside a {
 }
 
 #header, nav {
-	margin: 0px 0px 5px 0px;
-	padding: 5px 0px 10px 0;
+	margin-bottom: 10px;
 }
 
 hr { /*Foundation overide*/
