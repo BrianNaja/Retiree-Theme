@@ -43,7 +43,7 @@
   				
   				<div class="mobile_select">
           			<div class="mobile_menu_btn">
-          				<p>Menu</p>
+          				
           				<div class="icon-bar-container">
           					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
           				</div>

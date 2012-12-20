@@ -187,9 +187,9 @@ hgroup h1 a {
 	text-shadow: 1px 1px 3px rgb(0, 0, 0);
 	border: 2px solid black;
 	background-color: rgba(232, 58, 37, 0.7);/*red*/
-	-webkit-border-radius: 4px; 
-    -moz-border-radius: 4px; 
-    border-radius: 4px;
+	-webkit-border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    border-radius: 2px;
 	-webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0 0px 4px rgb(0, 0, 0);
 	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
@@ -288,7 +288,6 @@ article .bullet {
 	background: #00a6fc url(images/backgrounds/input-bg.png);
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
 	font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
-	font-weight: bold;
 	border: 1px solid #707070;
 	background-color: rgb(191, 191, 191);/*lightergray*/
 	font-size: 14px; 
@@ -447,6 +446,10 @@ span a, p a, aside a {
 	margin: 0px 0px 15px 15px;
 }
 
+.clear {
+	clear: both;
+}
+
 /*Twitter embed places an inline style of "width:550px!important" to the div, as well as a "max-width:550px!important" with the .twitter-tweet-rendered selector in their embed stylesheet, so to have priority over that, I had to use !important and specify a parent class name, which is kinda hacky, but I couldn't think of anything cleaner.*/
 
 .entry .twitter-tweet-rendered  { 
@@ -492,6 +495,7 @@ nav ul { /*Foundation overide*/
 nav .nav-bar  {
 	float: right;
 	width: auto;
+	margin-top: 10px;
 }
 
 nav .nav-bar li {
@@ -518,6 +522,7 @@ nav .nav-bar li a {
 	transition: all 0.5s ease-in-out;
 }
 
+/*
 nav .nav-bar li:nth-child(1) a:before { 
 	content: "A ";
 }
@@ -543,6 +548,7 @@ nav .nav-bar li a:first-letter {
 	font-size: 20px; font-size: 2.0rem; 
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
+*/
 
 nav .nav-bar li a:hover {
 	color: #EBF0FF;
@@ -616,7 +622,8 @@ nav .nav-bar li:first-child {
 	display: none;
 	clear: both;/*Needed to keep from jumping up into the toggle button.*/
 	background-color: rgba(87, 87, 87, 0.5);
-	padding: 0px 0px 0px 0px;
+	padding: 0px;
+	margin-bottom: 10px;
 }
 
 .mobile_menu li a, .mobile_menu .sub-menu li a,  {
@@ -633,7 +640,7 @@ nav .nav-bar li:first-child {
 	display: block;/*For a larger clickable area*/
 	font-size: 16px; font-size: 1.6rem;
 	color: #EBF0FF;/*almost white*/
-	padding: 5px 0px 5px 10px;
+	padding: 5px 0px 5px 26px;
 }
 
 .mobile_menu .sub-menu li:nth-child(2) {
@@ -657,6 +664,7 @@ nav .nav-bar li:first-child {
 	background-color: rgb(0, 0, 0);
 }
 
+/*
 .mobile_menu li:nth-child(1) a:before { 
 	content: "A ";
 }
@@ -682,6 +690,7 @@ nav .mobile_menu li a:first-letter {
 	font-size: 18px; font-size: 1.8rem;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
 }
+*/
 
 .mobile_menu .sub-menu li a:first-letter {/*mobile menu overide ModernPictogramsNormal*/
 	font-family: 'UbuntuRegular';
@@ -706,30 +715,20 @@ nav .mobile_menu li a:first-letter {
 
 .mobile_menu_btn {
 	top: -6px;
-	width: 86px;
+	width: 32px;
 	height: 40px;
 	position: relative;
 	float: right;
 	margin-bottom: 25px;
+	padding-bottom: 2px;
 	border: 2px solid black;
 	background-color: rgba(87, 87, 87, 0.6);
-	-webkit-border-radius: 4px; 
-    -moz-border-radius: 4px; 
-    border-radius: 4px;
+	-webkit-border-radius: 2px; 
+    -moz-border-radius: 2px; 
+    border-radius: 2px;
     -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0 0px 2px rgb(0, 0, 0);
 	box-shadow: 0 0px 2px rgba(0, 0, 0, 0.75);
-}
-
-.mobile_menu_btn p  {
-	position: absolute;
-	left: 34px;
-	top: 10px;
-	color: #EBF0FF;/*almost white*/
-	line-height: 1;
-	font-size: 17px;
-	font-size: 1.7rem;
-	text-shadow: 1px 1px 3px rgb(0, 0, 0); 
 }
 
 .icon-bar-container {
@@ -741,7 +740,7 @@ nav .mobile_menu li a:first-letter {
 .icon-bar { /*The three lines on the mobile menu button*/
 	display: block;
 	width: 18px;
-	height: 2px;
+	height: 3px;
 	margin: 3px;
 	background-color: #EBF0FF;/*almost white*/
 }
@@ -925,326 +924,6 @@ form label {
 
 /*Search----------------------------------------------*/
 
-/*!Photo Page----------------------------------------------*/
-.featured_fadein1  img:nth-child(2),
-.featured_fadein1  img:nth-child(3),
-.featured_fadein1  img:nth-child(4),
-.featured_fadein1  img:nth-child(5) {/*for photos page to hide last four images*/
-	display: none;	
-}
-
-.featured_fadein2  img:nth-child(2),
-.featured_fadein2  img:nth-child(3),
-.featured_fadein2  img:nth-child(4),
-.featured_fadein2  img:nth-child(5) {/*for photos page to hide last four images*/
-	display: none;	
-}
-
-.featured_fadein1 {
-	margin: 20px 0px 20px 0px;
-}
-
-.featured_fadein1:after { /*too keep the button from collapsing*/
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
-}
-
-.featured_fadein2 {
-	margin: 20px 0px 20px 0px;
-}
-
-.featured_fadein2:after { /*too keep the button from collapsing*/
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
-}
-
-.photo_slideshow a {
-	text-align: center;
-	width: 93%;
-	display: block;
-	color: #FFFFFF;
-	padding: 11px 15px 11px 15px;
-	font-size: 15px;
-	font-size: 1.5rem;
-	background: #00a6fc url(images/backgrounds/input-bg.png);
-	text-shadow: 0 -1px 1px rgb(0,0,0);
-	font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
-	font-weight: bold;
-	background-color: rgb(0, 69, 99);/*blue*/
-	margin: 0px;
-	-webkit-border-radius: 5px; 
-    -moz-border-radius: 5px; 
-    border-radius: 5px;
-	-webkit-box-shadow: 0 0px 4px rgb(0, 0, 0);
-	-moz-box-shadow: 0 0px 4px rgb(0, 0, 0);
-	box-shadow: 0 0px 4px rgb(0, 0, 0);
-}
-
-.photo_slideshow a:hover {
-	color: #FFFFFF;
-	background-color: rgb(0, 54, 77);/*darkblue*/
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
-
-.photo_slideshow a:after {
-	content: " >";
-	font-family: ModernPictogramsNormal;
-	padding-left: 10px;
-}
-
-/*Photo Page----------------------------------------------*/
-
-/*!Photo Galery----------------------------------------------*/
-.photoswipe {
-	padding: 0 40px;
-}
-
-.gallery li {
-	float: left;
-	padding: 0;
-	margin: 10px 10px 10px 10px;
-	height: 20%;
-	max-height: 150px;
-	width: 20%;
-	max-width: 150px;
-}
-
-/*Photo Galery----------------------------------------------*/
-
-/*!Video Page----------------------------------------------*/
-.video-row {
-	margin-bottom: 10px;
-}
-
-
-.video-image  {
-	position: relative;
-	float: left;
-	width: 300px;
-	height: 150px;
-	padding: 0px 15px 15px 0px;
-	margin-bottom: 15px;
-}
-
-.video-image span {
-	background-image: url(images/backgrounds/play.png);
-	position: absolute;
-	top: 45px;
-	left: 115px;
-	z-index: 1;
-	height: 72px;
-	width: 72px;
-}
-
-.video-entry .title {
-	margin: 10px 0 10px 0;
-}
-
-.clear {
-	clear: both;
-}
-
-.video-entry p {
-	display: inline;
-}
-
-/*Video Page----------------------------------------------*/
-
-/*!Resources Page----------------------------------------------*/
-
-#table {
-	font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
-	overflow: scroll;
-	display: inline-block;
-}
-
-table tbody tr:nth-child(even) { 
-	background-color: rgba(255, 233, 163, 0.3);/*yellow*/ 
-}
-
-#table table tbody tr td {
-	padding: 9px 10px 9px 10px;
-	font-size: 14px;
-	font-size: 1.4rem;
-}
-
-#table table tbody tr td:first-child {
-	padding-left: 30px;
-}
-
-#table table tbody tr td:last-child {
-	padding-right: 30px;
-}
-
-.resource {
-	margin: 20px auto 5px auto;
-	width: 80%;/*For centering the buttons*/
-}
-
-.resource li a, .resource_mobile li a {
-	display: block;/*For a larger clickable area*/
-	padding: 3px 8px 3px 6px;
-	color: #FFF;
-}
-
-.resource li, .resource_mobile li {
-	display: inline-block;
-	background: #00a6fc url(images/backgrounds/input-bg.png);
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
-	font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
-	font-weight: bold;
-	border: 1px solid #004563;
-	background-color: rgb(0, 79, 112);/*lighterblue*/
-	font-size: 14px; 
-	font-size: 1.4rem;
-	margin: 0 0 0 5px;
-	-webkit-border-radius: 3px; 
-    -moz-border-radius: 3px; 
-    border-radius: 3px;
-	-webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-}
-
-.resource li a:hover, .resource_mobile li a:hover {
-	background-color: rgb(0, 54, 77);/*darkblue*/
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
-
-.resource li:nth-child(1) a:before, .resource_mobile li:nth-child(1) a:before { 
-	content: "[ ";
-	font-family: 'ModernPictogramsNormal';
-	font-size: 20px; font-size: 2.0rem; 
-	text-shadow: 1px 1px 2px rgb(0, 0, 0);
-}
-
-.resource li:nth-child(2) a:before, .resource_mobile li:nth-child(2) a:before { 
-	content: "[ ";
-	font-family: 'ModernPictogramsNormal';
-	font-size: 20px; font-size: 2.0rem; 
-	text-shadow: 1px 1px 2px rgb(0, 0, 0);
-}
-
-.resource li:nth-child(3) a:before, .resource_mobile li:nth-child(3) a:before { 
-	content: "[ ";
-	font-family: 'ModernPictogramsNormal';
-	font-size: 20px; font-size: 2.0rem; 
-	text-shadow: 1px 1px 2px rgb(0, 0, 0);
-}
-
-.resource li:nth-child(4) a:before, .resource_mobile li:nth-child(4) a:before { 
-	content: "[ ";
-	font-family: 'ModernPictogramsNormal';
-	font-size: 20px; font-size: 2.0rem; 
-	text-shadow: 1px 1px 2px rgb(0, 0, 0);
-}
-
-/*
-.resource li a:first-letter, .resource_mobile li a:first-letter {
-	font-family: 'ModernPictogramsNormal';
-	font-size: 20px; font-size: 2.0rem; 
-	text-shadow: 1px 1px 2px rgb(0, 0, 0);
-}
-*/
-
-.finger {
-	display: none;
-}
-
-.resource_mobile ul {display: none;}
-
-/*Resources Page----------------------------------------------*/
-
-/*!Directions Page----------------------------------------------*/
-
-#map_canvas {
-  height: 600px;
-  margin-bottom: 30px;
-  -moz-box-shadow: 0px 0px 4px #373333;
-  -webkit-box-shadow: 0px 0px 4px #373333;
-  box-shadow: 0px 0px 4px #373333; 
-}
-
-#directionsPanel {
-  margin: 25px 0px 25px 0px;
-  background-color: rgba(255, 233, 163, 0.3);
-  width: 100%;
-  -moz-box-shadow: 0px 0px 4px #373333;
-  -webkit-box-shadow: 0px 0px 4px #373333;
-  box-shadow: 0px 0px 4px #373333;
-  position: relative;
-  z-index: 1;
-}
-
-#directionsPanel img { /* green pin */
-	margin-right: 20px;
-}
-
-.adp-summary {/* time & distance */
-	padding-left: 4px;
-}
-
-.adp-directions {
-   width: 100%;
-}
-  
-#start {
-  font-size: 15px;
-  border: 1px solid #BBB;
-  height: 22px;
-  width: 99%;
-  background: url(images/backgrounds/input-bg.png) rgba(255, 233, 163, 0.3);/*yellow*/ 
-}
-  
-#start:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  outline: 0;
-  outline: thin dotted 9;
-  background: #f8f8f8;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); 
-}
-  
-#end { /* select box */
-  font-size: 15px;
-  height: 26px;
-  width: 100%;
-  border: 1px solid #BBB;
-  display: inline;
-  margin-top: 12px;
-  background-color: rgba(255, 233, 163, 0.3);/*yellow*/  
-}
-
-.open-google-maps {
-	display: none;
-}
-
-.directions-disclamer {
-	font-size: 13px;
-	color: #af3528;
-	text-shadow: 1px 1px 1px rgba(87, 87, 87, 0.3);
-}
-
-.directions-disclamer span {
-	font-weight: bold;
-}
-
-/*Directions Page----------------------------------------------*/
 
 /*!404 Page----------------------------------------------*/
 
@@ -1272,6 +951,14 @@ table tbody tr:nth-child(even) {
 /*404 Page----------------------------------------------*/
 
 
+/*!@media 962px - 767px------------------------------------*/
+@media only screen and (max-width: 962px) and (min-width: 767px) {
+	.mobile_search {display: none;}/*to hide mobile search*/
+	
+}
+
+/*!@media 962px - 767px------------------------------------*/
+
 /*!@media 962px - 481px------------------------------------*/
 @media only screen and (max-width: 962px) and (min-width: 481px) {
 	p, ul, ol, li { 
@@ -1291,10 +978,7 @@ table tbody tr:nth-child(even) {
 	nav .nav-bar { display: none; }
 	
 	.mobile_menu {float: right; width: 35%; }
-	
-	.mobile_menu_btn {height: 38px;
-					  margin: 8px -8px 0px 0px;}
-	
+		
 	#header, nav {margin: 0px;}
 		
     header .mobile_select { display: block;
@@ -1304,58 +988,7 @@ table tbody tr:nth-child(even) {
 		     padding: 8px 0px 0px 0px; }
 		     
 	.single img { /*post thumbnail single page*/
-			width: 55%;}
-		
-	.video-image { float: left;
-				   padding: 0px 10px 5px 0px; }
-				   
-	.video-image span { top: 45px;
-						left: 115px;
-						height: 72px;
-						width: 72px;}			   
-
-	.video-entry .title { margin: 10px 0 10px 0; }
-				
-	.postmetadata { margin: 0 0 0 20px; }
-	
-	#table table tbody tr td {padding: 9px 5px 9px 5px;
-							  font-size: 14px;
-							  font-size: 1.4rem;}
-
-	#table table tbody tr td:first-child {padding-left: 15px;}
-
-	#table table tbody tr td:last-child {padding-right: 15px;}
-	
-	.resource li:nth-child(1) {width: 40%; 
-										   margin: 0 0 5px 40px;}
-											
-	.resource li:nth-child(2) {width: 40%; 
-										   margin: 0 0 5px 40px;}
-											
-	.resource li:nth-child(3) {width: 40%; 
-										   margin: 0 0 0 40px;}
-											
-	.resource li:nth-child(4) {width: 40%; 
-										   margin: 0 0 0 40px;} 
-	
-	.orbit-wrapper {max-width: 475px;}/*front page slideshow*/
-	
-	.slideshow .aside {width: 21.679%;}/*front page slideshow*/
-		
-	.photo_slideshow a {width: 92%;}/*Photos page*/
-	
-	.sticky-post p {
-	color: white;
-	font-size: 14px;
-	font-size: 1.4em;
-	font-size: 1.4rem;
-	font-style: italic;
-	font-weight: normal;
-	}/*front page slideshow*/
-	
-	.photoswipe {padding: 0px 0px 0px 50px;}/*Photo gallerie page*/
-	
-	.mobile_search {display: none;}/*to hide mobile search*/
+			width: 55%;}		
 	
 		#s {width: 94%;}
 
@@ -1382,6 +1015,12 @@ table tbody tr:nth-child(even) {
 }
 /*@media 962px - 481px------------------------------------*/
 
+/*@media 767px - 481px------------------------------------*/
+@media only screen and (max-width: 767px) and (min-width: 481px) {
+	.mobile_menu_btn {margin-top: 10px;}
+
+}
+/*@media 767px - 481px------------------------------------*/
 
 /*!@media 480px------------------------------------*/
 @media handheld, only screen and (max-width: 480px) {
@@ -1389,17 +1028,17 @@ table tbody tr:nth-child(even) {
 		line-height: 1.60;
 		font-size: 15px;
 		font-size: 1.5rem;}
-		
-	.content {padding: 8px 8px 8px 8px;}
 	
- 	.container {padding: 0 8px 0 8px; }
+	#header {margin-bottom: 0px;}
+			
+ 	.container {padding: 10px 8px 0px 8px; }
  	
  	hgroup { width: 50% !important; }
 			       
 	nav .nav-bar, nav .mobile_menu { display: none; }
 	
     header .mobile_select { display: block;
-    			 			               margin: 0 15px 0 5px; }
+    			 			margin: 0px 15px 0px 5px; }
 	
 	hgroup h1 { font-size: 30px; 
 				font-size: 3.0rem;
@@ -1415,9 +1054,9 @@ table tbody tr:nth-child(even) {
 		  padding: 8px 0px 0px 0px; }
 				
 	.mobile_select p { font-size: 1.1em; }
-	
+			
 	.mobile_menu_btn {height: 38px;
-					  margin: 12px -8px 0px 0px;}
+					  margin: 4px -8px 0px 0px;}
 								    
 	.single img { /*post thumbnail single page*/
 			width: 100%;}							    							    
@@ -1427,18 +1066,7 @@ table tbody tr:nth-child(even) {
 	#email {width: 94%;}
 		
 	#form-allowed-tags {display: none; }
-		
-	.video-image {width: 150px;
-				  height: 100px;
-				  padding-right: 20px; }
-				  
-	.video-image span { top: 6px;
-						left: 40px;
-						height: 72px;
-						width: 72px;}		  
-					   
-	.video-entry h2 {font-size: 1.2em;}
-	
+			
 	#wpcf7-f2240-p128-o1 {padding: 15px 0px 0px 0px;}/*contact form*/
 	
 	.wpcf7-text { width: 95%}/*contact form*/
@@ -1446,27 +1074,6 @@ table tbody tr:nth-child(even) {
 	.your-subject input[type="text"]  { width: 95%}/*contact form*/
 	
 	input[type="submit"]  { width: 100%}/*contact form*/
-	
-	#table table tbody tr td {padding: 9px 5px 9px 5px;
-							               font-size: 12px;
-							               font-size: 1.2rem;}
-							               
-	#table table tbody tr td:first-child {padding-left: 15px; }
-
-	#table table tbody tr td:last-child {padding-right: 15px; }
-	
-	.resource {display: none;}
-	
-	.resource_mobile ul {display: inline; 
-									  margin-bottom: 2px; 
-									  margin-top: 2px;}
-	
-	.resource_mobile li { width: 100%; 
-									 margin: 5px 0 0 0;}
-	
-	.resource_mobile li:first-child {margin-top: 0;}
-	
-	.resource_mobile li a {padding: 2px 5px 2px 20px}
 	
 	.finger {display: inline;
 			    font-family: 'ModernPictogramsNormal';
@@ -1486,98 +1093,10 @@ table tbody tr:nth-child(even) {
    						  				 -o-transform: rotate(90deg);
     					  				 -ms-transform: rotate(90deg);   
     					  				 transform: rotate(90deg);}
-    					  
-    .photoswipe { padding: 0;}
-    					  
-    .gallery li { margin: 5px 5px 5px 5px;
-				  	  height: 28%;
-				  	  max-height: 80px;
-				  	  width: 28%;
-				  	  max-width: 80px;}	
-				  
-	.gallery { padding: 0 0 0 15px;}
-	
-	.photo_slideshow a {width: 90%}/*button photo page*/
-	
-	.sticky-post p {
-	padding-left: 40px; 
-	margin: 0px;
-	}/*front page slideshow*/
-	
-	.sticky-post p {
-	color: white;
-	font-size: 14px;
-	font-size: 1.4em;
-	font-size: 1.4rem;
-	font-style: italic;
-	font-weight: normal;
-	}/*front page slideshow*/
-	
-	.sticky-post a {
-	color: rgba(0,123,176,1);
-	display: inline;
-	font-size: 14px;
-	font-size: 1.4em;
-	font-size: 1.4rem;
-	}
-	
+    					  	
  	#s {width: 95%;}/*search form*/
 
 	#searchsubmit {padding: 5px 15px 5px 15px;}/*search form*/
-	
-	#map_canvas, #directionsPanel, #start {display: none;}/*Directions Page*/
-	
-	#end { /* select box */
-		font-size: 15px;
-		height: 36px;
-		width: 100%;
-		border: 1px solid #BBB;
-		display: inline;
-		margin: 10px 0px 50px 0px;
-		background-color: rgba(255, 233, 163, 0.3);/*yellow*/  
-		}
-  
-   .open-maps {
-	   padding-bottom: 100px
-   }
-  
-   .open-google-maps {
-   		display: block;
-		color: #FFF;
-		font-size: 15px; 
-		font-size: 1.5rem;
-		font-weight: bold;
-		text-align: center;
-		padding: 8px 0px;
-		width: 100%;
-		color: #FFF;
-		background: #00a6fc url(images/backgrounds/input-bg.png);
-		text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
-		font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
-		border: 1px solid #004563;
-		background-color: rgb(0, 79, 112);/*lighterblue*/
-		-webkit-border-radius: 4px; 
-    	-moz-border-radius: 4px; 
-    	border-radius: 4px;
-		-webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-		box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-	}
-	
-	.open-google-maps:hover {
-		color: #FFF;
-		background-color: rgb(0, 54, 77);/*darkblue*/
-		-webkit-transition: all 0.5s ease-in-out;
-		-moz-transition: all 0.5s ease-in-out;
-		-o-transition: all 0.5s ease-in-out;
-		-ms-transition: all 0.5s ease-in-out;
-		transition: all 0.5s ease-in-out;
-	}
-	
-	.directions-disclamer {
-		font-size: 13px;
-		margin-top: 15px;
-	}
 	
 }
 /*@media 480px------------------------------------*/	
@@ -1602,24 +1121,9 @@ hgroup h1 {
      -ms-animation: pulse linear 2.5s;
 }
 
-.menu-item-398:hover .sub-menu {
-	-webkit-animation: pulse 0.5s;
-     -moz-animation: pulse 0.5s;
-     -ms-animation: pulse 0.5s;
-}
 
 /*@keyframes------------------------------------*/
 
-
-/* !Facebook----------------------------------------- */
-
-.home .fb {
-	padding-top: 15px;
-}
-
-.fb_iframe_widget {
-	margin-bottom: 15px!important;
-}
 
 /* !Jetpack----------------------------------------- */
 

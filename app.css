@@ -102,18 +102,6 @@ hgroup h1 a:hover {
 	margin: auto;
 }
 
-.quote-entry {
-	padding: 10px 10px 10px 10px;
-}
-
-.quote-entry blockquote p {
-	color: #FFFFFF;
-}
-
-.orbit-wrapper {
-	max-width: 600px; 
-}
-
 .featured img, .featured div{/*for orbit to keep images from displaying block*/
 	display: none;
 }
@@ -198,68 +186,6 @@ article {
 	margin: 0px 0px 8px 8px;
 }
 
-.quote {
-	border-bottom: none;
-}
-
-.quote-page {/*for removing border bottom on quote page*/
-	border-bottom: none;
-}
-
-.quote-entry .sharing {/*used to hide sharing buttons on the Quotes*/
-	display: none;
-}
-
-.quote-entry blockquote {
-	margin: 0px;
-	display: inline;
-	border-left: none;
-	font-style: italic;
-	font-family: 'UbuntuItalic', 'Helvetica', 'Arial';
-}
-
-.quote-entry p {
-	color: #0F0006;
-	line-height: 1.2;
-	font-size: 18px;
-	font-size: 1.8rem;
-}
-
-.quote-entry a {
-	float: right;
-	color: #FFFFFF;
-	padding: 4px 8px 4px 8px;
-	background: #00a6fc url(images/backgrounds/input-bg.png);
-	text-shadow: 0 -1px 1px rgb(0,0,0);
-	font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
-	font-weight: bold;
-	background-color: rgb(0, 69, 99);/*blue*/
-	font-size: 13px; 
-	font-size: 1.3rem;
-	margin: 0 0 0 5px;
-	-webkit-border-radius: 2px; 
-    -moz-border-radius: 2px; 
-    border-radius: 2px;
-	-webkit-box-shadow: 0 0px 4px rgb(0, 0, 0);
-	-moz-box-shadow: 0 0px 4px rgb(0, 0, 0);
-	box-shadow: 0 0px 4px rgb(0, 0, 0);
-}
-
-.quote-entry a:hover {
-	color: #FFFFFF;
-	background-color: rgb(0, 54, 77);/*darkblue*/
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
-
-.quote-entry a:after {
-	content: " >";
-	font-family: Pictograms;
-	padding-left: 10px;
-}
 
 .attachment-post-thumbnail {
 	display: inline-block;
@@ -271,7 +197,7 @@ aside  {
 }
 
 aside li  {
-	border-bottom: 1px dotted #555;
+	border-bottom: 1px dotted pink;
 }
 
 a {
