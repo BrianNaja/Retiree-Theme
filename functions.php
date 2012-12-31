@@ -63,7 +63,6 @@ if (function_exists('register_sidebar')) {
 
 // Comments
 
-// Custom callback to list comments in the Foundation style
 function custom_comments($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment;
     $GLOBALS['comment_depth'] = $depth;
@@ -238,7 +237,7 @@ add_action('login_head', 'custom_loginlogo');
 add_action('init', 'sidebar');
 
 function sidebar() {
-	///Register type and custom taxonomy for type.
+	
 	$sidebar_args = array('label' => 'Sidebar',
 				  'public' => true,
 				  'show_ui' => true,
@@ -247,9 +246,18 @@ function sidebar() {
 				  'has_archive' => true,
 				  'taxonomies' => array('post_tag'),
 				  'supports' => array('title', 'editor', 'excerpt', 'comments', 'thumbnail'));
- //Register type and custom taxonomy for type.
      
 register_post_type( 'sidebar' , $sidebar_args );}  //Register type and custom taxonomy for type.
+
+// Adds Custom Post Typs to the RSS Feed
+
+function add_cpts_to_rss_feed( $args ) {
+  if ( isset( $args['feed'] ) && !isset( $args['post_type'] ) )
+    $args['post_type'] = array('post', 'Sidebar');
+  return $args;
+}
+
+add_filter( 'request', 'add_cpts_to_rss_feed' );
 
 // Register jQuery and FitVids
 
