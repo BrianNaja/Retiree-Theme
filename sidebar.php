@@ -8,10 +8,9 @@
 		<?php endif; ?>
 	</ul>
 
-	<?php $custom_query = new WP_Query (array('post_type' => 'sidebar', 
-		                                   	  'posts_per_page' => 3));  ?>
+	<?php $second_query = new WP_Query ('cat=-1&posts_per_page=3&order=DEC') ?>
 			<!-- Start the Loop -->
-			<?php while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+			<?php while($second_query->have_posts()) : $second_query->the_post(); ?>
 			
 				<article> 
 		

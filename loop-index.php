@@ -16,10 +16,9 @@
 			else {echo 'class="ten columns centered"';} ?> >
 
 	<!-- Start the Loop -->	
-	<?php $custom_query = new WP_Query (array('paged' => $paged,
-									     	  'post_type' => array('post'))); ?>
+	<?php $first_query = new WP_Query ('cat=-5&posts_per_page=5&order=DEC') ?>
 	
-	<?php while($custom_query->have_posts()) : $custom_query->the_post(); ?>
+	<?php while($first_query->have_posts()) : $first_query->the_post(); ?>
 	
 		<!-- Begin the first article -->
 		<article  <?php post_class('class-name'); ?> > <!-- This was added for the Custom Classes Plugin -->
