@@ -234,6 +234,7 @@ add_action('login_head', 'custom_loginlogo');
 
 // Custom Post Types
 
+/*
 add_action('init', 'sidebar');
 
 function sidebar() {
@@ -253,11 +254,12 @@ register_post_type( 'sidebar' , $sidebar_args );}  //Register type and custom ta
 
 function add_cpts_to_rss_feed( $args ) {
   if ( isset( $args['feed'] ) && !isset( $args['post_type'] ) )
-    $args['post_type'] = array('post', 'Sidebar');
+    $args['post_type'] = array('post', 'sidebar');
   return $args;
 }
 
 add_filter( 'request', 'add_cpts_to_rss_feed' );
+*/
 
 // Register jQuery and FitVids
 

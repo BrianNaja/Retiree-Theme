@@ -11,7 +11,6 @@ h2, h3, h4, h5, h6, a, p, ul, ol, li, button, submit, input {
 	font-family: 'UbuntuRegular', 'Helvetica', 'Arial';
 }
 
-
 p, ul, ol, li { 
 	line-height: 1.60;
 	font-size: 14px;
@@ -30,6 +29,10 @@ h1 {
 
 table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td {
   font-size: 14px; 
+}
+
+input {
+	color: rgba(26, 26, 26, 0.7)
 }
 
 input::-webkit-input-placeholder {
@@ -383,6 +386,14 @@ aside li  {
 	padding-bottom: 15px;
 }
 
+#subscribe-blog input[type="text"] {
+	width: 98% !important;
+}
+
+#subscribe-blog input[type="submit"] {
+	width: 100%;
+}
+
 a {
 	color: #005D85;
 	text-shadow: 1px 1px 1px rgba(87, 87, 87, 0.2);
@@ -426,7 +437,7 @@ aside li h4 {
 }
 
 aside article { 
-	padding: 0px 0px 25px 0px;
+	padding-top: 15px;
 	margin: 0;
 	border-bottom: 1px dotted #555;
 }
@@ -521,34 +532,6 @@ nav .nav-bar li a {
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
-
-/*
-nav .nav-bar li:nth-child(1) a:before { 
-	content: "A ";
-}
-
-nav .nav-bar li:nth-child(2) a:before { 
-	content: "P ";
-}
-
-nav .nav-bar li:nth-child(3) a:before { 
-	content: "e ";
-}
-
-nav .nav-bar li:nth-child(4) a:before { 
-	content: "w ";
-}
-
-nav .nav-bar li:nth-child(5) a:before { 
-	content: "m ";
-}
-
-nav .nav-bar li a:first-letter {
-	font-family: 'ModernPictogramsNormal';
-	font-size: 20px; font-size: 2.0rem; 
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-}
-*/
 
 nav .nav-bar li a:hover {
 	color: #EBF0FF;
@@ -663,34 +646,6 @@ nav .nav-bar li:first-child {
 .mobile_menu li a:hover, .mobile_menu li a:active {
 	background-color: rgb(0, 0, 0);
 }
-
-/*
-.mobile_menu li:nth-child(1) a:before { 
-	content: "A ";
-}
-
-.mobile_menu li:nth-child(2) a:before { 
-	content: "P ";
-}
-
-.mobile_menu li:nth-child(3) a:before { 
-	content: "e ";
-}
-
-.mobile_menu li:nth-child(4) a:before { 
-	content: "w ";
-}
-
-.mobile_menu li:nth-child(5) a:before { 
-	content: "m ";
-}
-
-nav .mobile_menu li a:first-letter {
-	font-family: 'ModernPictogramsNormal';
-	font-size: 18px; font-size: 1.8rem;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); 
-}
-*/
 
 .mobile_menu .sub-menu li a:first-letter {/*mobile menu overide ModernPictogramsNormal*/
 	font-family: 'UbuntuRegular';
