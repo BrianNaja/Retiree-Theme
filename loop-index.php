@@ -37,7 +37,7 @@
 			<!-- Display the Post's Content in a div box. -->
 			<div class="entry index-page">
 				
-				<p><?php the_content(); ?></p><!-- Displays the_content -->
+				<p><?php the_excerpt(); ?></p><!-- Displays the_excerpt -->
 				
 			</div>
 			

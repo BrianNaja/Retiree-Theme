@@ -25,12 +25,8 @@
 			<!-- Display the Post's Content in a div box. -->
 			<div class="entry single">
 				
-				<?php if ( 'video' == get_post_type() ) {
-				  echo the_content();
-				}
-				  else { echo the_post_thumbnail('post-thumb');
-					     echo the_content();
-				  } ?>
+				<p><?php echo the_post_thumbnail('large');
+					  echo the_content(); ?></p>
 				
 			</div>
 			
@@ -40,7 +36,7 @@
 			<p class="postmetadata">Posted in <?php the_category(', '); ?></p>-->
 			
 			<p><?php the_tags('Tagged with: ', ', '); ?></p>
-			<!-- <p><?php previous_post_link(); ?>  /  <?php next_post_link(); ?></p> -->  
+			<p><?php previous_post_link(); ?>  /  <?php next_post_link(); ?></p>
 		</article>
 		<!-- Closes the first article -->
 		
