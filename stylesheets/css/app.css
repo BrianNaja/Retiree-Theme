@@ -3689,7 +3689,9 @@ form label {
   .mobile_search {
     display: none; }
 
-  /*to hide mobile search*/ }
+  /*to hide mobile search*/
+  input[type="submit"] {
+    width: 50%; } }
 /*@media 962px - 767px------------------------------------*/
 /*@media 962px - 481px------------------------------------*/
 @media only screen and (max-width: 962px) and (min-width: 481px) {
@@ -3754,10 +3756,7 @@ form label {
 /*@media 767px - 481px------------------------------------*/
 @media only screen and (max-width: 767px) and (min-width: 481px) {
   .mobile_menu_btn {
-    margin-top: 10px; }
-
-  input[type="submit"] {
-    width: 50%; } }
+    margin-top: 10px; } }
 /*@media 767px - 481px------------------------------------*/
 /*@media 480px------------------------------------*/
 @media handheld, only screen and (max-width: 480px) {

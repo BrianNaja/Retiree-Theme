@@ -909,7 +909,7 @@ form label {
 /*!@media 962px - 767px------------------------------------*/
 @media only screen and (max-width: 962px) and (min-width: 767px) {
 	.mobile_search {display: none;}/*to hide mobile search*/
-	
+	input[type="submit"]  { width: 50%}
 }
 
 /*!@media 962px - 767px------------------------------------*/
@@ -973,7 +973,7 @@ form label {
 /*@media 767px - 481px------------------------------------*/
 @media only screen and (max-width: 767px) and (min-width: 481px) {
 	.mobile_menu_btn {margin-top: 10px;}
-	input[type="submit"]  { width: 50%}
+	
 }
 /*@media 767px - 481px------------------------------------*/
 
